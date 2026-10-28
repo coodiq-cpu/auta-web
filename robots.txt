@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fotky/
+
+Sitemap: https://auta.bstauto.eu/sitemap.xml
