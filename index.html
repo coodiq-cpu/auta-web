@@ -37,7 +37,7 @@
   .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
   .lux{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
   header{position:sticky;top:0;z-index:20;background:rgba(14,12,10,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+  .hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px}
   .brand img.l{width:40px;height:auto}
   .brand img.w{height:30px;width:auto}
@@ -96,7 +96,11 @@
   .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;background:#f5f1e8;color:#0e0c0a;padding:12px 18px;border-radius:4px;font-size:14px;font-weight:500;max-width:calc(100% - 32px);text-align:center;transition:opacity .2s,transform .2s;z-index:50;pointer-events:none}
   .toast.on{opacity:1;transform:translate(-50%,0)}
   @media (max-width:760px){
-    .hnav a.t,.brand img.w{display:none}
+    .hnav a.t{display:none}
+    .brand{gap:8px;min-width:0}
+    .brand img.l{width:34px}
+    .brand img.w{height:18px}
+    .hnav .btn{padding:0 12px;font-size:11px;letter-spacing:.12em;white-space:nowrap}
     .hero{padding:28px 0 8px}
     #filtreBtn{display:inline-flex}
     .bar{display:none}
@@ -104,6 +108,7 @@
     .bar.otv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .info{grid-template-columns:1fr;padding:22px}
   }
+  @media (max-width:350px){.brand img.w{display:none}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
